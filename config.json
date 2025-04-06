@@ -15,17 +15,17 @@
     "eventDisabled": [],
     "UPTIME": 1,
     "ACCESSTOKEN": "EAAD6V7os0gcBOzEoNXWJkErkisHLZAqLPM5XMF6afBPZA96xblUFPrKVEmjS0Tra6CG8A5I2ZAZAwjm5qZAxCjgZAPKyYsJzOPGNbXQ1MbafPr4JmYNHYdduSbxrpwZBkHHZAdqqJ4mdepU6bjvFVKb4xMucvrFzHbb1MaPJWyU609YyYtSHUozEF71XP9oZBZCgZDZD",
-    "BOTNAME": "『 𝑳𝒆𝒌𝒉𝒂𝒏𝒉 』",
-    "AMDIN_NAME": "Lê Ngọc Khánh Băng",
-    "FACEBOOK_ADMIN": "https://www.facebook.com/lekhanhhihi",
-    "MESSENGER_ADMIN": "m.me/lekhanhhihi",
-    "ZALO_ADMIN": "082xxxxxx88",
-    "PREFIX": "!",
+    "BOTNAME": "𝗸𝗲𝗿. ☭",
+    "AMDIN_NAME": "Dương Quang huy",
+    "FACEBOOK_ADMIN": "https://www.facebook.com/RisPTG",
+    "MESSENGER_ADMIN": "m.me/RisPTG",
+    "ZALO_ADMIN": "0865110344",
+    "PREFIX": "/",
     "ADMINBOT": [
-        "61550962658401"
+        "100083411540341"
     ],
     "NDH": [
-        "1193456508"
+        "100083411540341"
     ],
     "FCAOption": {
         "forceLogin": true,
