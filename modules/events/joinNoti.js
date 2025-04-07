@@ -64,10 +64,10 @@ module.exports.run = async function({ api, event }) {
 			}
 			memLength.sort((a, b) => a - b);
 			
-			(typeof threadData.customJoin == "undefined") ? msg = 'Kính cẩn nghiêng mình chào {name}.\n✨Chào mừng mày đã đến {threadName}.\n{type} hiện là đứa thứ {soThanhVien} được quăng vào đây 🎀\nGia nhập vào hồi {thu} {ngay} {gio} \n✨━━━━━━━━━━━✨' : msg = threadData.customJoin;
+			(typeof threadData.customJoin == "undefined") ? msg = 'Chào mừng thành viên mới {name}.\n✨Chào mừng bạn đã đến {threadName}.\n{type} hiện là đứa thứ {soThanhVien} được thêm vào đây 🎀\nGia nhập vào hồi {thu} {ngay} {gio} \n✨━━━━━━━━━━━✨' : msg = threadData.customJoin;
 			msg = msg
 			.replace(/\{name}/g, nameArray.join(', '))
-			.replace(/\{type}/g, (memLength.length > 1) ?  'Chúng mày' : 'Mày')
+			.replace(/\{type}/g, (memLength.length > 1) ?  'Các bạn' : 'Bạn')
 			.replace(/\{soThanhVien}/g, memLength.join(', '))
 			.replace(/\{threadName}/g, threadName)
       .replace(/\{thu}/g, thu)
