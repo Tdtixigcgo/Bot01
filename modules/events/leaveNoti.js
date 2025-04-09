@@ -61,7 +61,7 @@ module.exports.run = async function ({ api, event, Users, Threads }) {
     }
     if (existsSync(path)) mkdirSync(path, { recursive: true });
 
-    (typeof data.customLeave == "undefined") ? msg = "𝗧𝗛𝗔̀𝗡𝗛 𝗩𝗜𝗘̂𝗡 𝗢𝗨𝗧 𝗡𝗛𝗢́𝗠\n━━━━━━━━━━━━━\n {name} 𝘃𝘂̛̀𝗮 {type} 𝗸𝗵𝗼̉𝗶 𝗯𝗼𝘅 𝗱𝗼 𝗻𝗴𝗵𝗶𝗲̣̂𝗽 𝗰𝗵𝘂̛𝗼̛́𝗻𝗴 𝗾𝘂𝗮́ 𝗻𝗮̣̆𝗻𝗴. 𝗖𝗵𝘂́𝗰 𝗯𝗮̣𝗻 {name} 𝗰𝗼̂́ 𝗴𝗮̆́𝗻𝗴 𝗴𝗶𝗮̉𝗶 𝗻𝗴𝗵𝗶𝗲̣̂𝗽. 𝗦𝗮𝘆 𝗴𝗼𝗼𝗱𝗯𝘆𝗲 𝘃𝗮̀ 𝗸𝗵𝗼̂𝗻𝗴 𝗵𝗲̣𝗻 𝗻𝗴𝗮̀𝘆 𝗴𝗮̣̆𝗽 𝗹𝗮̣𝗶 🍑\n𝗨𝗥𝗟: https://m.facebook.com/{iduser} 🌸\n━━━━━━━━━━━━━\n[ {time} ]" : msg = data.customLeave;
+    (typeof data.customLeave == "undefined") ? msg = "𝗧𝗛𝗔̀𝗡𝗛 𝗩𝗜𝗘̂𝗡 𝗢𝗨𝗧 𝗡𝗛𝗢́𝗠\n━━━━━━━━━━━━━\n {name} 𝘃𝘂̛̀𝗮 {type} 𝗸𝗵𝗼̉𝗶 𝗯𝗼𝘅. 𝗦𝗮𝘆 𝗴𝗼𝗼𝗱𝗯𝘆𝗲 𝘃𝗮̀ 𝗸𝗵𝗼̂𝗻𝗴 𝗵𝗲̣𝗻 𝗻𝗴𝗮̀𝘆 𝗴𝗮̣̆𝗽 𝗹𝗮̣𝗶 🍑\n𝗨𝗥𝗟: https://m.facebook.com/{iduser} 🌸\n━━━━━━━━━━━━━\n[ {time} ]" : msg = data.customLeave;
   var getData = await Users.getData(event.author)
 var nameAuthor = typeof getData.name == "undefined" ? "" : getData.name
     msg = msg.replace(/\{name}/g, name).replace(/\{type}/g, type).replace(/\{iduser}/g, iduser).replace(/\{author}/g, nameAuthor).replace(/\{time}/g, time);
