@@ -33,7 +33,7 @@ module.exports.run = async function({ api, event }) {
 		const fs = require("fs");
         await api.sendMessage("Đang thực hiện kết nối...", event.threadID);
         await new Promise(resolve => setTimeout(resolve, 2000));
-		return api.sendMessage("", event.threadID, () => api.sendMessage({body:`►Terabyte Connection◄\n_________________________\nNhập .menu để xem chi tiết các lệnh \n◆--------------◆`, attachment: fs.createReadStream(__dirname + "/cache/joinMp4/hello.gif")} ,threadID));
+		return api.sendMessage("", event.threadID, () => api.sendMessage({body:`►Terabyte Connection◄\n_________________________\nNhập ${global.config.PREFIX}menu để xem chi tiết các lệnh \n◆--------------◆`, attachment: fs.createReadStream(__dirname + "/cache/joinMp4/hello.gif")} ,threadID));
 	}
 	else {
 		try {
