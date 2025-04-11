@@ -2,7 +2,7 @@ module.exports.config = {
     name: "leave",
     eventType: ["log:unsubscribe"],
     version: "1.0.0",
-    credits: "Ranz",
+    credits: "Ranz; mod qh",
     description: "Thông báo Bot hoặc người dùng rời khỏi nhóm có random gif/ảnh/video",
     dependencies: {
         "fs-extra": "",
@@ -37,7 +37,7 @@ module.exports.run = async function ({ api, event, Users, Threads }) {
     const data = global.data.threadData.get(parseInt(threadID)) || (await Threads.getData(threadID)).data;
     const iduser = event.logMessageData.leftParticipantFbId;
     const name = global.data.userName.get(event.logMessageData.leftParticipantFbId) || await Users.getNameUser(event.logMessageData.leftParticipantFbId);
-    const type = (event.author == event.logMessageData.leftParticipantFbId) ? "𝘁𝘂̛̣ 𝗯𝗮̂́𝗺 𝗻𝘂́𝘁 𝗯𝗶𝗲̂́𝗻" : "𝗯𝗶̣ 𝗾𝘂𝗮̉𝗻 𝘁𝗿𝗶̣ 𝘃𝗶𝗲̂𝗻 𝘀𝘂́𝘁 𝗯𝗮𝘆 𝗺𝗮̀𝘂";
+    const type = (event.author == event.logMessageData.leftParticipantFbId) ? "𝘁𝘂̛̣ đ𝗼̣̂𝗻𝗴 𝗼𝘂𝘁" : "𝗯𝗶̣ 𝗾𝘂𝗮̉𝗻 𝘁𝗿𝗶̣ 𝘃𝗶𝗲̂𝗻 𝗸𝗶𝗰𝗸";
 	const path = join(__dirname, "cache", "leaveGif");
 	const gifPath = join(path, `${threadID}.gìf`);
     var msg, formPush
@@ -61,7 +61,7 @@ module.exports.run = async function ({ api, event, Users, Threads }) {
     }
     if (existsSync(path)) mkdirSync(path, { recursive: true });
 
-    (typeof data.customLeave == "undefined") ? msg = "𝗧𝗛𝗔̀𝗡𝗛 𝗩𝗜𝗘̂𝗡 𝗢𝗨𝗧 𝗡𝗛𝗢́𝗠\n━━━━━━━━━━━━━\n {name} 𝘃𝘂̛̀𝗮 {type} 𝗸𝗵𝗼̉𝗶 𝗯𝗼𝘅. 𝗦𝗮𝘆 𝗴𝗼𝗼𝗱𝗯𝘆𝗲 𝘃𝗮̀ 𝗸𝗵𝗼̂𝗻𝗴 𝗵𝗲̣𝗻 𝗻𝗴𝗮̀𝘆 𝗴𝗮̣̆𝗽 𝗹𝗮̣𝗶 🍑\n𝗨𝗥𝗟: https://m.facebook.com/{iduser} 🌸\n━━━━━━━━━━━━━\n[ {time} ]" : msg = data.customLeave;
+    (typeof data.customLeave == "undefined") ? msg = "𝗧𝗛𝗔̀𝗡𝗛 𝗩𝗜𝗘̂𝗡 𝗢𝗨𝗧 𝗡𝗛𝗢́𝗠\n━━━━━━━━━━━━━\n {name} 𝘃𝘂̛̀𝗮 {type} 𝗸𝗵𝗼̉𝗶 𝗯𝗼𝘅.\n━━━━━━━━━━━━━\n[ {time} ]" : msg = data.customLeave;
   var getData = await Users.getData(event.author)
 var nameAuthor = typeof getData.name == "undefined" ? "" : getData.name
     msg = msg.replace(/\{name}/g, name).replace(/\{type}/g, type).replace(/\{iduser}/g, iduser).replace(/\{author}/g, nameAuthor).replace(/\{time}/g, time);
