@@ -20,32 +20,12 @@ const findWeather = (city, degreeType = 'C') => {
  if (err) {
  reject(err);
  } else {
- resolve(result);
- }
- });
- });
-};
-
-const nam = [
- {
- timer: '00:00:00',
- message: ['Chúc mọi người ngủ ngon 😴']
- },
- {
- timer: '05:00:00',
+ resolve00:00',
  message: ['\n{thoitiet}']
  },
  {
- timer: '06:00:00',
- message: ['Buổi sáng đầy năng lượng nha các bạn 😙']
-   },
- {
-   timer: '06:05:00',
- message: ['\nthoitiet']
- },
- {
- timer: '12:00:00',
- message: ['Chúc mọi người buổi trưa vui vẻ 😋']
+ timer: '11:00:00',
+ message: ['Cả sáng mệt mỏi rùi, nghỉ ngơi nạp năng lượng nào!! 😴']
  },
  {
  timer: '13:00:00',
@@ -53,11 +33,11 @@ const nam = [
  },
  {
  timer: '17:00:00',
- message: ['Chuẩn bị nấu cơm thôi 😉']
+ message: ['Hihi chuẩn bị nấu cơm thui nào 😋']
  },
  {
  timer: '21:00:00',
- message: ['Đi ngủ đi thức khuya không tốt 😤']
+ message: ['Đến giờ đi ngủ rồi tắt điện thoại 😉']
  }
 ];
 
