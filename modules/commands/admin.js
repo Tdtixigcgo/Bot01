@@ -93,7 +93,7 @@ switch (args[0]) {
                     count++;
                 }
             }
-            api.sendMessage(`[ Người Điều Hành Bot ]\n──────────────────\n👤 Name: ${global.config.ADMIN_NAME}\n📎 Facebook: ${global.config.FACEBOOK_ADMIN}\n📩 Emai: xccee23@gmail.com\n──────────────────\n\n[ ADMIN BOT ]\n──────────────────\n${msg.join("\n")}\n──────────────────\n👤 Người dùng: ${nd}\n⏰ Time: ${gio}`, event.threadID, event.messageID);
+            api.sendMessage(`[ Người Điều Hành Bot ]\n──────────────────\n👤 Name: ${global.config.ADMIN_NAME}\n📎 Facebook: ${global.config.FACEBOOK_ADMIN}\n📩 Emai: duonghuy1452011@gmail.comcom\n──────────────────\n\n[ ADMIN BOT ]\n──────────────────\n${msg.join("\n")}\n──────────────────\n👤 Người dùng: ${nd}\n⏰ Time: ${gio}`, event.threadID, event.messageID);
             break;
         }
             case "add": { 
