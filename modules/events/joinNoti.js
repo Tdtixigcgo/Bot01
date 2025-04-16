@@ -26,6 +26,7 @@ module.exports.run = async function({ api, event, Users }) {
 			const pathGif = join(path, `hi.gif`);
 
 			var mentions = [], nameArray = [], memLength = [], i = 0;
+			  var timeNow = moment.tz("Asia/Ho_Chi_Minh").format("HH:mm:ss")
 			
 			for (id in event.logMessageData.addedParticipants) {
 				const userName = event.logMessageData.addedParticipants[id].fullName;
