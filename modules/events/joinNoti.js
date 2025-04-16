@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "joinNoti",
 	eventType: ["log:subscribe"],
 	version: "1.0.4",
-	credits: "Mirai Team; mod qh",
+	credits: "Mirai Team; mod Xám",
 	description: "Thông báo bot hoặc người vào nhóm",
 	dependencies: {
 		"fs-extra": ""
@@ -14,7 +14,7 @@ module.exports.run = async function({ api, event, Users }) {
 	const { threadID } = event;
 	if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
 		api.changeNickname(` 『 ${global.config.PREFIX} 』⪼ ${(!global.config.BOTNAME) ? "Made by CatalizCS and SpermLord" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
-		return api.sendMessage(` Kết nối thành công \n________________________\n🛶 Prefix của bot là: 「 ${global.config.PREFIX} 」\n________________________\n🌼 Hãy sử dụng văn minh !`, threadID);
+		return api.sendMessage(`🌐 Kết nối thành công \n________________________\n🛶 Prefix của bot là: 「 ${global.config.PREFIX} 」\n________________________\n🌼 Hãy sử dụng văn minh !`, threadID);
 	}
 	else {
 		try {
