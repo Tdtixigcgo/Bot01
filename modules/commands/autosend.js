@@ -5,7 +5,7 @@ module.exports.config = {
  name: 'autosend',
  version: '10.02',
  hasPermission: 3,
- credits: 'DongDev; mod qh',
+ credits: 'DongDev',
  description: 'Tự động gửi tin nhắn theo giờ đã cài!',
  commandCategory: 'Admin',
  usages: '[]',
@@ -20,24 +20,100 @@ const findWeather = (city, degreeType = 'C') => {
  if (err) {
  reject(err);
  } else {
- resolve00:00',
+ resolve(result);
+ }
+ });
+ });
+};
+
+const nam = [
+ {
+ timer: '00:00:00',
+ message: ['Chúc mọi người ngủ ngon 😴', 'Khuya rùi ngủ ngon nhé các bạn 😇','Chúc mọi người ngủ ngon 😴💤']
+ },
+ {
+ timer: '00:30:00',
+ message: ['']
+ },
+ {
+ timer: '05:00:00',
  message: ['\n{thoitiet}']
+ },
+ {
+ timer: '06:00:00',
+ message: ['Chúc mọi người buổi sáng vui vẻ 😉', 'Chúc mn buổi sáng vv ❤️', 'Buổi sáng đầy năng lượng nha các bạn 😙']
+ },
+ {
+ timer: '07:00:00',
+ message: ['']
+ },
+ {
+ timer: '08:00:00',
+ message: ['']
+ },
+ {
+ timer: '09:00:00',
+ message: ['']
+ },
+ {
+ timer: '10:00:00',
+ message: ['Chúc mọi người buổi trưa vui vẻ 😋', 'Chúc mọi người bữa trưa ngon miệng 😋']
  },
  {
  timer: '11:00:00',
  message: ['Cả sáng mệt mỏi rùi, nghỉ ngơi nạp năng lượng nào!! 😴']
  },
  {
+ timer: '12:00:00',
+ message: ['']
+ },
+ {
+ timer: '12:30:00',
+ message: ['']
+ },
+ {
  timer: '13:00:00',
- message: ['Chúc mọi người buổi chiều đầy năng lượng 😼']
+ message: ['Chúc mọi người buổi chiều đầy năng lượng 😼', 'Chúc mọi người buổi chiều vui vẻ 🙌']
+ },
+ {
+ timer: '14:00:00',
+ message: ['']
+ },
+ {
+ timer: '15:00:00',
+ message: ['']
+ },
+ {
+ timer: '16:00:00',
+ message: ['']
  },
  {
  timer: '17:00:00',
  message: ['Hihi chuẩn bị nấu cơm thui nào 😋']
  },
  {
+ timer: '18:00:00',
+ message: ['\n{thoitiet}']
+ },
+ {
+ timer: '19:00:00',
+ message: ['Chúc nọi người buổi tối vui vẻ 😉']
+ },
+ {
+ timer: '20:00:00',
+ message: ['']
+ },
+ {
  timer: '21:00:00',
- message: ['Đến giờ đi ngủ rồi tắt điện thoại 😉']
+ message: ['Thức khuya không tốt cho sức khỏe đâu! 😤']
+ },
+ {
+ timer: '22:00:00',
+ message: ['']
+ },
+ {
+ timer: '23:00:00',
+ message: ['']
  }
 ];
 
@@ -68,7 +144,7 @@ const city = tinh[Math.floor(Math.random() * tinh.length)];
  var winddisplay = result[0].current.winddisplay.toString().split(" ")[2];
  "Northeast" == winddisplay && (winddisplay = "Hướng Đông Bắc"), "Northwest" == winddisplay && (winddisplay = "Hướng Tây Bắc"), "Southeast" == winddisplay && (winddisplay = "Hướng Đông Nam"), "Southwest" == winddisplay && (winddisplay = "Hướng Tây Nam"), "East" == winddisplay && (winddisplay = "Hướng Đông"), "West" == winddisplay && (winddisplay = "Hướng Tây"), "North" == winddisplay && (winddisplay = "Hướng Bắc"), "South" == winddisplay && (winddisplay = "Hướng Nam");
  var thoitiet = `(~~[ ${gio} ]~~)\n──────────────────\n[🗺️] →⁠ Cập nhật thời tiết tại: ${result[0].location.name}\n[🌡] →⁠ Nhiệt độ: ${result[0].current.temperature}°${result[0].location.degreetype}\n[✏️] →⁠ Mô tả: ${skytext}\n[♒] →⁠ Độ ẩm: ${result[0].current.humidity}%\n[💨] →⁠ Hướng gió: ${result[0].current.windspeed} ${winddisplay}\n[⏰] →⁠ Ghi nhận vào: ${result[0].current.observationtime}\n[🗺️] →⁠ Từ trạm ${result[0].current.observationpoint}\n────────────────────\n🔄 Đây Là Tin Nhắn Tự Động`;
- 
+
  msg = msg.replace(/{thoitiet}/, thoitiet);
 
  msg = {
