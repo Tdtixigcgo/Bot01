@@ -21,6 +21,7 @@ module.exports.run = async function({ api, event, Users, Threads }) {
 	const path = join(__dirname, "cache", "leaveGif");
 	const gifPath = join(path, `bye.gif`);
 	var msg, formPush
+	  var timeNow = moment.tz("Asia/Ho_Chi_Minh").format("HH:mm:ss")
 
 	if (existsSync(path)) mkdirSync(path, { recursive: true });
 
