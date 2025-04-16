@@ -78,7 +78,7 @@
   exec('rm -fr modules/commands/*.gif');
   exec('rm -fr modules/commands/*.mp3');
   const adminID = `${global.config.ADMINBOT[0]}`
-  api.sendMessage('Bot vừa khởi động lại và đã tự động dọn dẹp cache!', adminID);
+  api.sendMessage('Bot vừa khởi động lại!', adminID);
   //////dọn cache khi onbot!////////////////////////////////////////////////////////////
 
   ///////////////////////////////////////////////
