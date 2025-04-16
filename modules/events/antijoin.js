@@ -2,7 +2,7 @@ module.exports.config = {
  name: "antijoin",
  eventType: ["log:subscribe"],
  version: "1.0.0",
- credits: "D-Jukie",
+ credits: "D-Jukie",// Mod by Xám
  description: "Cấm thành viên mới vào nhóm"
 };
 
