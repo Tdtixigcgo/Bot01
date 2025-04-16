@@ -29,7 +29,7 @@ const findWeather = (city, degreeType = 'C') => {
 const nam = [
  {
  timer: '00:00:00',
- message: ['Chúc mọi người ngủ ngon 😴', 'Khuya rùi ngủ ngon nhé các bạn 😇','Chúc mọi người ngủ ngon 😴💤']
+ message: ['Chúc mọi người ngủ ngon 😴💤']
  },
  {
  timer: '00:30:00',
@@ -41,7 +41,7 @@ const nam = [
  },
  {
  timer: '06:00:00',
- message: ['Chúc mọi người buổi sáng vui vẻ 😉', 'Chúc mn buổi sáng vv ❤️', 'Buổi sáng đầy năng lượng nha các bạn 😙']
+ message: ['Buổi sáng đầy năng lượng nha các bạn 😙']
  },
  {
  timer: '07:00:00',
@@ -57,7 +57,7 @@ const nam = [
  },
  {
  timer: '10:00:00',
- message: ['Chúc mọi người buổi trưa vui vẻ 😋', 'Chúc mọi người bữa trưa ngon miệng 😋']
+ message: ['Chúc mọi người bữa trưa ngon miệng 😋']
  },
  {
  timer: '11:00:00',
@@ -73,7 +73,7 @@ const nam = [
  },
  {
  timer: '13:00:00',
- message: ['Chúc mọi người buổi chiều đầy năng lượng 😼', 'Chúc mọi người buổi chiều vui vẻ 🙌']
+ message: ['Chúc mọi người buổi chiều đầy năng lượng 😼']
  },
  {
  timer: '14:00:00',
