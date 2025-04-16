@@ -2,7 +2,7 @@
 	name: "leave",
 	eventType: ["log:unsubscribe"],
 	version: "1.0.0",
-	credits: "Mirai Team",
+	credits: "Mirai Team",// Mod by Xám
 	description: "Thông báo bot hoặc người rời khỏi nhóm",
 	dependencies: {
 		"fs-extra": "",
@@ -17,14 +17,14 @@ module.exports.run = async function({ api, event, Users, Threads }) {
 	const { threadID } = event;
 	const data = global.data.threadData.get(parseInt(threadID)) || (await Threads.getData(threadID)).data;
 	const name = global.data.userName.get(event.logMessageData.leftParticipantFbId) || await Users.getNameUser(event.logMessageData.leftParticipantFbId);
-	const type = (event.author == event.logMessageData.leftParticipantFbId) ? "vì không tán được em nào nên đã tự rời khỏi băng đảng" : "vì không đủ đẳng cấp nên đã bị quản trị viên âm thầm thanh toán";
+	const type = (event.author == event.logMessageData.leftParticipantFbId) ? "đã tự động rời khỏi nhóm." : "đã bị quản trị viên xóa khỏi nhóm.";
 	const path = join(__dirname, "cache", "leaveGif");
 	const gifPath = join(path, `bye.gif`);
 	var msg, formPush
 
 	if (existsSync(path)) mkdirSync(path, { recursive: true });
 
-	(typeof data.customLeave == "undefined") ? msg = "Con vợ {name} {type}" : msg = data.customLeave;
+	(typeof data.customLeave == "undefined") ? msg = "Bạn {name} {type}" : msg = data.customLeave;
 	msg = msg.replace(/\{name}/g, name).replace(/\{type}/g, type);
 
 	if (existsSync(gifPath)) formPush = { body: msg, attachment: createReadStream(gifPath) }
