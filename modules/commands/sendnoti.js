@@ -5,7 +5,7 @@ module.exports.config = {
     name: "sendnoti",
     version: "1.1.1",
     hasPermssion: 2,
-    credits: "N1002",
+    credits: "N1002",// Mod by Xám
     description: "Gửi tin nhắn đến tấy cả nhóm và reply để phản hồi",
     commandCategory: "Admin",
     usages: "text",
