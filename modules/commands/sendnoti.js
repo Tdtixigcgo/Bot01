@@ -22,7 +22,7 @@ module.exports.run = async({ api, event, Users, permission }) => {
     const atm = await type == "message_reply" ? mR.attachments : atms.length != 0 ? atms : "nofile";
     const content = !args[1] ? "chỉ có tệp" : body.slice(body.indexOf(args[1]));
     if (!args[1] && atm == "nofile") return api.sendMessage(`Bạn chưa nhập nội dung`, tid, mid);
-    var msg = `» Thông Báo Từ Admin «\n──────────────────\n👤 Admin: ${(await Users.getData(sid)).name}\n🌐 Link fb: https://www.facebook.com/profile.php?id=${event.senderID}\n🏘️ Nơi gửi: ${event.isGroup == true ? 'Nhóm ' + global.data.threadInfo.get(event.threadID).threadName: 'từ cuộc trò chuyện riêng với bot'}\n⏰ time: ${fullTime()}\n💬 Nội dung: ${content}\n──────────────────\n✏ Reply tin nhắn này nếu muốn ( phản hồi ) về admin`
+    var msg = `» Thông Báo Từ Admin «\n──────────────────\n👤 Admin: ${(await Users.getData(sid)).name}\n🌐 Link fb: https://www.facebook.com/profile.php?id=${event.senderID}\n🏘️ Nơi gửi: ${event.isGroup == true ? 'Nhóm ' + global.data.threadInfo.get(event.threadID).threadName: 'từ cuộc trò chuyện riêng với bot'}\n⏰ time: ${fullTime()}\n\n💬 Nội dung: ${content}\n\n──────────────────\n✏ Reply tin nhắn này nếu muốn ( phản hồi ) về admin`
     const uwu = atm == "nofile" ? msg : {
         body: msg,
         attachment: await DownLoad(atm)
