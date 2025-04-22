@@ -14,18 +14,18 @@
     "commandDisabled": [],
     "eventDisabled": [],
     "UPTIME": 1,
-    "ACCESSTOKEN": "EAAGNO4a7r2wBOweiAONsX2y9HmpXeZAZAVQScnslZBKrQuClKwFFxh26J8YCU5LOBWBZAKZAiJQbtFp5oTA6oqXPFSwz0v0c3KkX8a7F0ZCtFdNfMIUk4rxE1ebXWYDt2oL29Oa4mP9Pr051Xrjz2KCZASiXdcCeAxZCfAUMXYGntSwZCZCeeQP356BQZDZD",
-    "BOTNAME": "xᴀ́ᴍ ♫",
-    "AMDIN_NAME": "Quang huy",
-    "FACEBOOK_ADMIN": "https://www.facebook.com/xamsPTG",
-    "MESSENGER_ADMIN": "m.me/xamsPTG",
-    "ZALO_ADMIN": "0865110344",
-    "PREFIX": "/",
+    "ACCESSTOKEN": "EAAGNO4a7r2wBO2nAQbGjWnUOQqDnvVYgR4l5ZAUUcX5GABK7Un77ZCw10b1A3ZC6XQp4Lz9KIzpZA9ngjnRKdIcdEj6trlY1FgTFdEFowHQIIjfkZC2HLBmUMFnQk1q7ezQ7lUvoZC6A3rlotRjXRgk6FhWP9bkJXn3ZB7ZBZBK0JFlyzQVK6JAwpEdBmcwZDZD",
+    "BOTNAME": "♫",
+    "AMDIN_NAME": "Trieu Dang",
+    "FACEBOOK_ADMIN": "https://www.facebook.com/dangvnbun",
+    "MESSENGER_ADMIN": "m.me/dangvnbun",
+    "ZALO_ADMIN": "100090292607208",
+    "PREFIX": ".",
     "ADMINBOT": [
-        "100083411540341"
+        "100090292607208"
     ],
     "NDH": [
-        "100083411540341"
+        "100090292607208"
     ],
     "FCAOption": {
         "forceLogin": true,
