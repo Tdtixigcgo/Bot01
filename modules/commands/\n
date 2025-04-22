@@ -36,7 +36,7 @@ async run(o) {
    t = process.uptime(),
    h = Math.floor(t / (60 * 60)), 
    p = Math.floor((t % (60 * 60)) / 60), s = Math.floor(t % 60);
-send({body: `⚠ Chưa Nhập Tên Lệnh.\n⏰ Thời gian hoạt động: ${h}:${p}:${s}\n📂 Tổng video hiện có: ${urls.length-2}\n✅ Số video khả dụng: ${this.queues.length}`,attachment: this.queues.splice(0, 1)})
+send({body: `⚠ Chưa Nhập Tên Lệnh.\n⏰ Thời gian hoạt động: ${h}:${p}:${s}`,attachment: this.queues.splice(0, 1)})
  }
 }
 module.exports = new Command({
